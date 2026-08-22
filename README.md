@@ -43,6 +43,15 @@ dsh plugin --profile default remove shiyu-dsh-plugins
 dsh plugin --profile default add "github:ShiRuYu/shiyu-dsh-plugins#path:/packages/dsh-enhancement-toolbox"
 ```
 
+首次从 Git 安装时，pnpm 可能会阻止 `prepare` 构建脚本。将错误信息中打印的完整 `dsh-enhancement-toolbox@https://codeload.github.com/...` 键加入 `%USERPROFILE%\\.dsh\\profiles\\default\\pnpm-workspace.yaml`：
+
+```yaml
+allowBuilds:
+  "dsh-enhancement-toolbox@https://codeload.github.com/ShiRuYu/shiyu-dsh-plugins/tar.gz/<commit>#path:/packages/dsh-enhancement-toolbox": true
+```
+
+保存后重新执行上面的 `dsh plugin ... add` 命令。键必须使用 pnpm 错误中显示的完整 commit URL。
+
 安装后启动并检查配置层：
 
 ```bash
