@@ -1,3 +1,5 @@
-insert:
-  - id: dsh-enhancement-toolbox
-    name: dsh-enhancement-toolbox
+# DSH bundle patch layers are a top-level YAML array. Installing this package
+# into a profile appends the plugin to dsh.profile.bundles.
+- insert:
+    - id: dsh-enhancement-toolbox
+      name: dsh-enhancement-toolbox
