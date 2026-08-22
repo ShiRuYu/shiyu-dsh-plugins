@@ -36,6 +36,13 @@ dsh plugin --profile default add "github:ShiRuYu/shiyu-dsh-plugins#master&path:p
 
 当前 bundle 尚未发布到 npm，因此直接使用 `dsh-enhancement-toolbox` 会返回 `ERR_PNPM_FETCH_404`。只有完成 npm 发布后，才可以改用 `dsh plugin --profile default add dsh-enhancement-toolbox`。
 
+如果此前误装了仓库根包 `shiyu-dsh-plugins`，先移除它再安装子目录包（否则 profile 不会激活增强 bundle）：
+
+```bash
+dsh plugin --profile default remove shiyu-dsh-plugins
+dsh plugin --profile default add "github:ShiRuYu/shiyu-dsh-plugins#master&path:packages/dsh-enhancement-toolbox"
+```
+
 安装后启动并检查配置层：
 
 ```bash
