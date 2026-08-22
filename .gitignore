@@ -21,3 +21,8 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+# Node/DSH plugin build artifacts
+node_modules/
+packages/*/node_modules/
+packages/dsh-enhancement-toolbox/lib/
+*.tsbuildinfo

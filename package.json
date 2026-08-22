@@ -1,0 +1,11 @@
+{
+  "name": "shiyu-dsh-plugins",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm --filter dsh-enhancement-toolbox build",
+    "test": "pnpm --filter dsh-enhancement-toolbox test",
+    "typecheck": "pnpm --filter dsh-enhancement-toolbox typecheck"
+  },
+  "packageManager": "pnpm@10.12.4"
+}
