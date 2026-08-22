@@ -19,3 +19,24 @@ pnpm --filter dsh-enhancement-toolbox typecheck
 pnpm --filter dsh-enhancement-toolbox test
 pnpm --filter dsh-enhancement-toolbox build
 ```
+
+### DSH 安装
+
+从本仓库源码安装到 `default` profile：
+
+```bash
+dsh plugin --profile default add ./packages/dsh-enhancement-toolbox
+```
+
+如果已将 bundle 发布到 npm，则使用：
+
+```bash
+dsh plugin --profile default add dsh-enhancement-toolbox
+```
+
+安装后启动并检查配置层：
+
+```bash
+dsh --profile default
+dsh plugin --profile default --dump-config
+```
