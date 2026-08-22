@@ -1,0 +1,7 @@
+interface:
+  display_name: "DSH Plugin Developer"
+  short_description: "开发符合官方 Cordis 契约的 DSH 插件"
+  default_prompt: "使用 $dsh-plugin-developer 开发一个符合官方 Cordis 契约的 DSH 插件。"
+
+policy:
+  allow_implicit_invocation: true
