@@ -2,6 +2,12 @@
   "name": "dsh-enhancement-toolbox",
   "version": "0.1.0",
   "description": "DSH session enhancement toolbox with independently toggleable browser features.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShiRuYu/shiyu-dsh-plugins.git",
+    "directory": "packages/dsh-enhancement-toolbox"
+  },
+  "publishConfig": { "access": "public" },
   "type": "module",
   "main": "./lib/index.js",
   "types": "./lib/types/index.d.ts",

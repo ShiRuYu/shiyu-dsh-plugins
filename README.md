@@ -28,11 +28,13 @@ pnpm --filter dsh-enhancement-toolbox build
 dsh plugin --profile default add ./packages/dsh-enhancement-toolbox
 ```
 
-如果已将 bundle 发布到 npm，则使用：
+从 GitHub monorepo 的子目录安装（PowerShell 请保留整段引号）：
 
 ```bash
-dsh plugin --profile default add dsh-enhancement-toolbox
+dsh plugin --profile default add "github:ShiRuYu/shiyu-dsh-plugins#master&path:/packages/dsh-enhancement-toolbox"
 ```
+
+当前 bundle 尚未发布到 npm，因此直接使用 `dsh-enhancement-toolbox` 会返回 `ERR_PNPM_FETCH_404`。只有完成 npm 发布后，才可以改用 `dsh plugin --profile default add dsh-enhancement-toolbox`。
 
 安装后启动并检查配置层：
 
